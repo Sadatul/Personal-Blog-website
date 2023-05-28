@@ -3,8 +3,7 @@
 <h1>Home</h1>
 <p><%= startingContent %></p>
 <% posts.forEach((post) => { %>
-<% let newTitle = post.title.split(" ").join("-") %>
-<% let s = "http://localhost:3000/posts/" + newTitle%>
+<% let s = "http://localhost:3000/posts/" + post.id%>
 <h2><%= post.title %></h2>
 <p><%= post.body %><a href=<%= s %>>Read More</a></p>
 <% }); %>
